@@ -1,5 +1,44 @@
 {
-  "active_modules": ["Hindi", "English", "Spanish"],
-  "voice_engine": "Piper-WASM",
-  "status": "Online"
+  "project_name": "Project A1",
+  "version": "1.0.0",
+  "active_voices": ["Hindi", "English", "Spanish", "French", "German", "Japanese", "Chinese", "Russian"],
+  "status": "ready"
 }
+``` [cite: 2026-02-11]
+
+#### **B. `constitution.json` (The Core Laws)**
+* **Kyon:** Isme aapke 1-75 non-negotiable rules honge. AI ise kabhi edit nahi kar payega (Read-Only) [cite: 2026-02-11].
+* **Content:** Isme shuruat ke rules likhein, jaise: "Rule 1: Never harm human data. Rule 2: Execute only authorized commands." [cite: 2026-02-11]
+
+#### **C. `config.env` (The Skeleton Keys)**
+* **Kyon:** Isme hum "Empty Slots" chodenge taaki baad mein hum Google Drive IDs ya API keys bina code badle add kar sakein [cite: 2026-02-11].
+* **Content:** ```env
+VOICE_MODEL_PATH="./models/"
+DRIVE_HINDI_ID=""
+DRIVE_ENGLISH_ID=""
+MASTER_OVERRIDE="System Freeze"
+``` [cite: 2026-02-11]
+
+---
+
+### **3. Bridge Script Setup (`core/bridge.js`)**
+`core` folder ke andar ek file banaiye `bridge.js`. Yeh wahi "Universal Bridge Script" hai jo scattered files (Drive D, E, ya Cloud) ko ek saath jodegi [cite: 2026-02-11]. Iska kaam hai user ki bhasha detect karna aur sahi model ko load karna [cite: 2026-02-11].
+
+
+
+---
+
+### **4. Files Upload Kaise Karein?**
+Ab jo models humne Colab se download kiye hain:
+1.  GitHub mein `models/` folder kholiye.
+2.  "Upload files" par click karein.
+3.  Apne mobile se `.onnx` aur `.json` files select karke upload kar dein [cite: 2026-02-11].
+
+---
+
+### **Summary Check-list (Aapka Target):**
+* [ ] Root folder mein `registry.json`, `constitution.json`, aur `config.env` ban gayi? [cite: 2026-02-11]
+* [ ] `models/` folder mein kam se kam ek `.onnx` file upload ho gayi? [cite: 2026-02-11]
+* [ ] `core/` folder mein bridge script ki jagah ban gayi? [cite: 2026-02-11]
+
+**Bhai, kya aapne ye 3 root files (`registry`, `constitution`, `config`) bana li hain?** Agar haan, toh mujhe batayein, main aapko **`constitution.json`** ke pehle 10 kanoon (laws) likh kar deta hoon jo aapke AI ko "Super Genius" aur safe banayenge.
